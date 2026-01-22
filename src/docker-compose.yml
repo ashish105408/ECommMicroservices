@@ -1,12 +1,15 @@
 services:
   catalogdb:
-    image: postgres
+    image: postgres:17
 
   basketdb:
-    image: postgres
+    image: postgres:17
 
   distributedcache:  
     image: redis
+
+  orderdb:
+    image: mcr.microsoft.com/mssql/server
 
   catalog.api:
     image: ${DOCKER_REGISTRY-}catalogapi
